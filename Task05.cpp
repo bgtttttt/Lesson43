@@ -18,13 +18,17 @@ int* test2() {
 	*a = 100;
 	return a;
 }
+int* test3() {
+	static int a = 100;
+	return &a;
+}
 void test(double n) {
 	n * 10;
 }
 
 int main() {
-	int* pa = test2();
-	cout << *pa << "\n" << test2 << "\n";
+	int* pa = test3();
+	cout << *pa << "\n" << test3 << "\n";
 
 	sin(10);
 	cos(100);
@@ -34,7 +38,6 @@ int main() {
 
 	cout << *pa;
 
-	delete pa;
 
 	return 0;
 }
