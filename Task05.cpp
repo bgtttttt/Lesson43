@@ -10,21 +10,21 @@ void destroy(int* array) {
 	delete[] array;
 }
 int* test1() {
+	int a = 100;
+	return &a;
+}
+int* test2() {
 	int* a = new int;
 	*a = 100;
 	return a;
-}
-int* test2() {
-	int a = 100;
-	return &a;
 }
 void test(double n) {
 	n * 10;
 }
 
 int main() {
-	int* pa = test1();
-	cout << *pa << "\n" << test1 << "\n";
+	int* pa = test2();
+	cout << *pa << "\n" << test2 << "\n";
 
 	sin(10);
 	cos(100);
@@ -33,6 +33,8 @@ int main() {
 	test(30.3);
 
 	cout << *pa;
+
+	delete pa;
 
 	return 0;
 }
